@@ -1,5 +1,9 @@
 package com.example.springdocker.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * Created by Johan Rune
  * Date: 2021-05-11
@@ -7,6 +11,10 @@ package com.example.springdocker.model;
  * Project: IntelliJ IDEA
  * Copyright: MIT
  */
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Car {
     String id;
     String name;

@@ -1,9 +1,7 @@
 package com.example.springdocker.service;
 
 import com.example.springdocker.model.Car;
-import com.example.springdocker.model.Food;
 import com.example.springdocker.repository.CarRepository;
-import com.example.springdocker.repository.FoodRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +23,7 @@ public class CarService {
 
     public List<String> getRunableCars() {
         // hämtar alla Foods som vi kan laga
-        List<Car> drivableCars = repository.findCarCanIDriveIt(true);
+        List<Car> drivableCars = repository.findCarByCanIDriveIt(true);
 
         // returnerar endast Food namnen i en lista
         return drivableCars.stream()
