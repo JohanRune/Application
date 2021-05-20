@@ -21,8 +21,8 @@ public class CarService {
         repository.save(car);
     }
 
-    public List<String> getRunableCars() {
-        // hämtar alla Foods som vi kan laga
+    public List<String> getRunableCars() { //List<Car>?
+        // hämtar alla Cars som vi kan köra
         List<Car> drivableCars = repository.findCarByCanIDriveIt(true);
 
         // returnerar endast Food namnen i en lista
