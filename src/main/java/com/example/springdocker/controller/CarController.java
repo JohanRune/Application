@@ -5,10 +5,7 @@ import com.example.springdocker.model.Food;
 import com.example.springdocker.service.CarService;
 import com.example.springdocker.service.FoodService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,7 +19,7 @@ public class CarController {
         return service.getCars();
     }
 
-    @PostMapping("/cars")
+    @PostMapping("/cars/save")
     public void saveNewCar(@RequestBody Car car) {
         service.saveNewCar(car);
     }
